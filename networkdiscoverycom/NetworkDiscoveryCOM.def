@@ -1,0 +1,9 @@
+; NetworkDiscoveryCOM.def : Declares the module parameters.
+
+LIBRARY      "NetworkDiscoveryCOM.DLL"
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE

@@ -1,0 +1,27 @@
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+
+Sub Application_OnStart
+	' Set our user count to 0 when we start the server
+	Application("ActiveUsers") = 0
+End Sub
+
+Sub Session_OnStart
+	' Change Session Timeout to 20 minutes (if you need to)
+	Session.Timeout = 20
+	' Set a Session Start Time
+	' This is only important to assure we start a session
+	Session("Start") = Now
+	' Increase the active visitors count when we start the session
+	Application.Lock
+		Application("ActiveUsers") = Application("ActiveUsers") + 1
+	Application.UnLock
+End Sub
+
+Sub Session_OnEnd
+	' Decrease the active visitors count when the session ends.
+	Application.Lock
+		Application("ActiveUsers") = Application("ActiveUsers") - 1
+	Application.UnLock
+End Sub
+
+</SCRIPT>

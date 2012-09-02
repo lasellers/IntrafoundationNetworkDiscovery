@@ -1,0 +1,53 @@
+// NetworkDiscoveryCOM.idl : IDL source for NetworkDiscoveryCOM.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (NetworkDiscoveryCOM.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(BBFC9F3B-C4EC-4B53-86AA-D44B2CCC3B9E),
+		dual,
+		helpstring("INetworkDiscovery Interface"),
+		pointer_default(unique)
+	]
+	interface INetworkDiscovery : IDispatch
+	{
+		[propget, id(1), helpstring("property thread")] HRESULT thread([out, retval] long* pVal);
+		[propget, id(2), helpstring("property version")] HRESULT version([out, retval] BSTR* pstr);
+		[propget, id(3), helpstring("property copyright")] HRESULT copyright([out, retval] BSTR* pstr);
+		[propget, id(4), helpstring("property description")] HRESULT description([out, retval] BSTR* pstr);
+		[propget, id(5), helpstring("property instance")] HRESULT instance([out, retval] long* pVal);
+		[propget, id(6), helpstring("property instances")] HRESULT instances([out, retval] long* pVal);
+		[propget, id(7), helpstring("property Log")] HRESULT Log([out, retval] BSTR* pstrText);
+		[id(8), helpstring("method ClearLog")] HRESULT ClearLog();
+
+		[id(10), helpstring("method Computer")] HRESULT Computer([out, retval] BSTR* bytes);
+		[id(11), helpstring("method NetworkComputers")] HRESULT NetworkComputers([out, retval] BSTR* bytes);
+		[id(12), helpstring("method ComputerIP")] HRESULT ComputerIP([out, retval] BSTR* bytes);
+		[id(13), helpstring("method NetworkComputersIP")] HRESULT NetworkComputersIP([out, retval] BSTR* bytes);
+	};
+
+[
+	uuid(65BE79AC-EE9E-4568-BE1D-E90187122F58),
+	version(1.0),
+	helpstring("NetworkDiscoveryCOM 1.0 Type Library")
+]
+library NETWORKDISCOVERYCOMLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	[
+		uuid(28E25814-C783-4416-96BF-FFD37F81B2CC),
+		helpstring("NetworkDiscovery Class")
+	]
+	coclass NetworkDiscovery
+	{
+		[default] interface INetworkDiscovery;
+	};
+};

@@ -1,0 +1,23 @@
+HKCR
+{
+	Intrafoundation.NetworkDiscovery.1 = s 'NetworkDiscovery Class'
+	{
+		CLSID = s '{28E25814-C783-4416-96BF-FFD37F81B2CC}'
+	}
+	Intrafoundation.NetworkDiscovery = s 'NetworkDiscovery Class'
+	{
+		CLSID = s '{28E25814-C783-4416-96BF-FFD37F81B2CC}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {28E25814-C783-4416-96BF-FFD37F81B2CC} = s 'NetworkDiscovery Class'
+		{
+			ProgID = s 'Intrafoundation.NetworkDiscovery.1'
+			VersionIndependentProgID = s 'Intrafoundation.NetworkDiscovery'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}
