@@ -4,7 +4,6 @@
 /*
 
 Simple network discovery functions for LANs.
-
 */
 
 // mpr.lib ws2_32.lib netapi32.lib 
@@ -301,6 +300,21 @@ int CLANDiscovery::NetworkComputers(
 #endif
 		for(unsigned int i=0; i < ResourceCount; i++, NetResource++)
 		{
+			if(ResourceCount==1 && NetResource->dwDisplayType==7)
+			{
+				log.AddLog(
+				_T(__FILE__),
+				__LINE__,
+				L"CLANDiscovery::NetworkComputers",
+				L"There may to be a network configuration problem preventing network discovery. Run the test harness for comparison and/or contact your administrator: dwUsage=%d dwType=%d dwDisplayType=%d lpRemoteName=%p lpLocalName=%p %s.",
+				NetResource->dwUsage,
+				NetResource->dwType,
+				NetResource->dwDisplayType,
+				NetResource->lpRemoteName,
+				NetResource->lpLocalName,
+				NetResource->lpLocalName);
+			}
+
 #ifdef _DEBUG
 			printf("%d] dwUsage=%d dwType=%d dwDisplayType=%d lpRemoteName=%p lpLocalName=%p %s\n",
 				i,
