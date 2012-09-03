@@ -3,56 +3,19 @@
 <title>Intrafoundation.NetworkDiscovery.1 COM v1.3</title>
 </head>
 
-<body index="index.html">
+<body>
 
-<table border=0 cellspacing=0 cellpadding=0 width="100%" class=header>
-<tr>
-	<td colspan=2 align=right width=80%>
-	<div><strong><a href="http://www.intrafoundation.com/software/networkdiscovery.htm">I n t r a f o u n d a t i o n . N e t w o r k D i s c o v e r y . 1</a></strong></div>
-	</td>
-	<td align=right width=20% rowspan=2><a href="index.html"></a></td>
-</tr>
-<tr>
-	<td align=left>
-<div class=headeroptional><!--C# .NET and -->C++ ATL COM Component</div>
-<div class=headeroptional>FOR <a href="http://www.microsoft.com">ASP</a> and <a href="http://www.adobe.com">ColdFusion</a></div>
-	</td>
-	<td align=right>
-<div></div>
+<div><strong><a href="http://www.intrafoundation.com/software/networkdiscovery.htm">I n t r a f o u n d a t i o n . N e t w o r k D i s c o v e r y . 1</a></strong></div>
+<div><!--C# .NET and -->C++ ATL COM Component</div>
+<div>FOR <a href="http://www.microsoft.com">ASP</a> and <a href="http://www.adobe.com">ColdFusion</a></div>
 <div><small>Open Source <!--64-bit .NET and -->64 and 32-bit C++ COM Object</small></div>
-	</td>
-</tr>
-</table>
-<table border=0 cellspacing=0 cellpadding=0 width=100%>
-<tr valign=top>
-	<td>
 
-<table width=100%>
-<tr valign=top>
-	<td rowspan=4 width=360 class=logo></td>
-	<td align=right>
-	by <strong>Lewis Sellers</strong> (aka TommyRaven)<br>
-	I n t r a f o u n d a t i o n   S o f t w a r e<br>
-
-	<br>
-	<br>
 
 <tt><strong>v1.3, August 30th 2012</strong></tt><br>
 <small>
 <a href="http://www.intrafoundation.com">http://www.intrafoundation.com</a><br>
 <a href="mailto:webmaster@intrafoundation.com">webmaster@intrafoundation.com</a><br>
 </small>
-
-<br>
-<div style="color: #800000; font-family: Arial,serif; font-size: 80%;">
-I'm available for short and long term contract work.<br>
-Need extensions of some kind crafted or an extra pair of hands for straight up web programming? <a href="http://www.intrafoundation.com/contact-us/">Contact Me</a>.
-</div>
-	</td>
-</tr>
-</table>
-
-
 
 
 
